@@ -1,8 +1,11 @@
 package com.example.pressuresensor;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -37,6 +40,23 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.insole_19) TextView mInsole_19;
     @BindView(R.id.insole_20) TextView mInsole_20;
 
+    @BindView(R.id.insole_region_1) ImageView mInsoleRegion1;
+    @BindView(R.id.insole_region_2) ImageView mInsoleRegion2;
+    @BindView(R.id.insole_region_3) ImageView mInsoleRegion3;
+    @BindView(R.id.insole_region_4) ImageView mInsoleRegion4;
+    @BindView(R.id.insole_region_5) ImageView mInsoleRegion5;
+    @BindView(R.id.insole_region_6) ImageView mInsoleRegion6;
+    @BindView(R.id.insole_region_7) ImageView mInsoleRegion7;
+    @BindView(R.id.insole_region_8) ImageView mInsoleRegion8;
+    @BindView(R.id.insole_region_9) ImageView mInsoleRegion9;
+    @BindView(R.id.insole_region_10) ImageView mInsoleRegion10;
+    @BindView(R.id.insole_region_11) ImageView mInsoleRegion11;
+    @BindView(R.id.insole_region_12) ImageView mInsoleRegion12;
+    @BindView(R.id.insole_region_13) ImageView mInsoleRegion13;
+    @BindView(R.id.insole_region_14) ImageView mInsoleRegion14;
+    @BindView(R.id.insole_region_15) ImageView mInsoleRegion15;
+
+
 
 
 
@@ -46,6 +66,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.insole);
         ButterKnife.bind(this);
+/*
+        VectorChildFinder vector = new VectorChildFinder(this, R.drawable.my_vector, imageView);
+
+        VectorDrawableCompat.VFullPath path1 = vector.findPathByName("path1");
+        path1.setFillColor(Color.RED);*/
 
         ImageView img = findViewById(R.id.right_insole);
 
@@ -75,8 +100,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mViewModel.getInsoleColor().observe(this, color -> {
-
-            mInsole_1.setBackgroundColor(Color.parseColor(color[0]));
+            DrawableCompat.setTint(mInsoleRegion1.getDrawable(), Color.parseColor(color[0]));
+            DrawableCompat.setTint(mInsoleRegion2.getDrawable(), Color.parseColor(color[1]));
+            DrawableCompat.setTint(mInsoleRegion3.getDrawable(), Color.parseColor(color[2]));
+            DrawableCompat.setTint(mInsoleRegion4.getDrawable(), Color.parseColor(color[3]));
+            DrawableCompat.setTint(mInsoleRegion5.getDrawable(), Color.parseColor(color[4]));
+            DrawableCompat.setTint(mInsoleRegion6.getDrawable(), Color.parseColor(color[5]));
+            DrawableCompat.setTint(mInsoleRegion7.getDrawable(), Color.parseColor(color[6]));
+            DrawableCompat.setTint(mInsoleRegion8.getDrawable(), Color.parseColor(color[7]));
+            DrawableCompat.setTint(mInsoleRegion9.getDrawable(), Color.parseColor(color[8]));
+            DrawableCompat.setTint(mInsoleRegion10.getDrawable(), Color.parseColor(color[9]));
+            DrawableCompat.setTint(mInsoleRegion11.getDrawable(), Color.parseColor(color[10]));
+            DrawableCompat.setTint(mInsoleRegion12.getDrawable(), Color.parseColor(color[11]));
+            DrawableCompat.setTint(mInsoleRegion13.getDrawable(), Color.parseColor(color[12]));
+            DrawableCompat.setTint(mInsoleRegion14.getDrawable(), Color.parseColor(color[13]));
+            DrawableCompat.setTint(mInsoleRegion15.getDrawable(), Color.parseColor(color[14]));
+            //mInsoleRegion1.setTint(Color.parseColor(color[0]));
+/*            mInsole_1.setBackgroundColor(Color.parseColor(color[0]));
             mInsole_2.setBackgroundColor(Color.parseColor(color[1]));
             mInsole_3.setBackgroundColor(Color.parseColor(color[2]));
             mInsole_4.setBackgroundColor(Color.parseColor(color[3]));
@@ -95,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             mInsole_17.setBackgroundColor(Color.parseColor(color[16]));
             mInsole_18.setBackgroundColor(Color.parseColor(color[17]));
             mInsole_19.setBackgroundColor(Color.parseColor(color[18]));
-            mInsole_20.setBackgroundColor(Color.parseColor(color[19]));
+            mInsole_20.setBackgroundColor(Color.parseColor(color[19]));*/
         });
 
     }
