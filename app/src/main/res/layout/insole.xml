@@ -43,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/n_a"
+        android:background="@color/colorPrimary"
         android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/insole_17"
         app:layout_constraintTop_toTopOf="@+id/insole_17" />

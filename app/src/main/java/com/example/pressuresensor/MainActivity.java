@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,11 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.insole);
         ButterKnife.bind(this);
+
+        ImageView img = findViewById(R.id.right_insole);
 
         mViewModel = new ViewModelProvider(this).get(ViewModel.class);
 
@@ -67,5 +73,30 @@ public class MainActivity extends AppCompatActivity {
             mInsole_19.setText(insole_array[18].toString());
             mInsole_20.setText(insole_array[19].toString());
         });
+
+        mViewModel.getInsoleColor().observe(this, color -> {
+
+            mInsole_1.setBackgroundColor(Color.parseColor(color[0]));
+            mInsole_2.setBackgroundColor(Color.parseColor(color[1]));
+            mInsole_3.setBackgroundColor(Color.parseColor(color[2]));
+            mInsole_4.setBackgroundColor(Color.parseColor(color[3]));
+            mInsole_5.setBackgroundColor(Color.parseColor(color[4]));
+            mInsole_6.setBackgroundColor(Color.parseColor(color[5]));
+            mInsole_7.setBackgroundColor(Color.parseColor(color[6]));
+            mInsole_8.setBackgroundColor(Color.parseColor(color[7]));
+            mInsole_9.setBackgroundColor(Color.parseColor(color[8]));
+            mInsole_10.setBackgroundColor(Color.parseColor(color[9]));
+            mInsole_11.setBackgroundColor(Color.parseColor(color[10]));
+            mInsole_12.setBackgroundColor(Color.parseColor(color[11]));
+            mInsole_13.setBackgroundColor(Color.parseColor(color[12]));
+            mInsole_14.setBackgroundColor(Color.parseColor(color[13]));
+            mInsole_15.setBackgroundColor(Color.parseColor(color[14]));
+            mInsole_16.setBackgroundColor(Color.parseColor(color[15]));
+            mInsole_17.setBackgroundColor(Color.parseColor(color[16]));
+            mInsole_18.setBackgroundColor(Color.parseColor(color[17]));
+            mInsole_19.setBackgroundColor(Color.parseColor(color[18]));
+            mInsole_20.setBackgroundColor(Color.parseColor(color[19]));
+        });
+
     }
 }
