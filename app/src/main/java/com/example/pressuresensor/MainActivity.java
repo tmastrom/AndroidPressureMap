@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewModel mViewModel;
 
-    @BindView(R.id.insole_region_1) ImageView mInsoleRegion1;
+    @BindView(R.id.insole_region_1)	ImageView mInsoleRegion1;
     @BindView(R.id.insole_region_2) ImageView mInsoleRegion2;
     @BindView(R.id.insole_region_3) ImageView mInsoleRegion3;
     @BindView(R.id.insole_region_4) ImageView mInsoleRegion4;
@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.insole_region_13) ImageView mInsoleRegion13;
     @BindView(R.id.insole_region_14) ImageView mInsoleRegion14;
     @BindView(R.id.insole_region_15) ImageView mInsoleRegion15;
+    @BindView(R.id.insole_region_16) ImageView mInsoleRegion16;
+    @BindView(R.id.insole_region_17) ImageView mInsoleRegion17;
+    @BindView(R.id.insole_region_18) ImageView mInsoleRegion18;
+    @BindView(R.id.insole_region_19) ImageView mInsoleRegion19;
+    @BindView(R.id.insole_region_20) ImageView mInsoleRegion20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mViewModel = new ViewModelProvider(this).get(ViewModel.class);
 
         mViewModel.getInsoleColor().observe(this, color -> {
+
             DrawableCompat.setTint(mInsoleRegion1.getDrawable(), Color.parseColor(color[0]));
             DrawableCompat.setTint(mInsoleRegion2.getDrawable(), Color.parseColor(color[1]));
             DrawableCompat.setTint(mInsoleRegion3.getDrawable(), Color.parseColor(color[2]));
@@ -55,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
             DrawableCompat.setTint(mInsoleRegion13.getDrawable(), Color.parseColor(color[12]));
             DrawableCompat.setTint(mInsoleRegion14.getDrawable(), Color.parseColor(color[13]));
             DrawableCompat.setTint(mInsoleRegion15.getDrawable(), Color.parseColor(color[14]));
+            DrawableCompat.setTint(mInsoleRegion16.getDrawable(), Color.parseColor(color[15]));
+            DrawableCompat.setTint(mInsoleRegion17.getDrawable(), Color.parseColor(color[16]));
+            DrawableCompat.setTint(mInsoleRegion18.getDrawable(), Color.parseColor(color[17]));
+            DrawableCompat.setTint(mInsoleRegion19.getDrawable(), Color.parseColor(color[18]));
+            DrawableCompat.setTint(mInsoleRegion20.getDrawable(), Color.parseColor(color[19]));
 
         });
 

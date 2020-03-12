@@ -10,10 +10,9 @@ import java.util.HashMap;
 
 public class ViewModel extends AndroidViewModel {
 
-    // Insole colors
     private final MutableLiveData<String[]> mInsoleColor = new MutableLiveData<>();
 
-    public LiveData<String[]> getInsoleColor() {return mInsoleColor;}
+    LiveData<String[]> getInsoleColor() {return mInsoleColor;}
 
     public ViewModel(@NonNull Application application) {
         super(application);
@@ -23,7 +22,7 @@ public class ViewModel extends AndroidViewModel {
     }
 
 
-    public void onInsoleValueReceived( Integer[] value) {
+    private void onInsoleValueReceived(Integer[] value) {
 
         HashMap<Integer, String> colourMap = new HashMap<>();
         colourMap.put(1, "#0000FF");    // Blue
