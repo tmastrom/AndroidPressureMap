@@ -17,7 +17,7 @@ public class ViewModel extends AndroidViewModel {
     public ViewModel(@NonNull Application application) {
         super(application);
 
-        Integer[] value = new Integer[]{0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9};
+        Integer[] value = new Integer[]{0,1,2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2,1,0};
         onInsoleValueReceived(value);
     }
 
@@ -25,16 +25,16 @@ public class ViewModel extends AndroidViewModel {
     private void onInsoleValueReceived(Integer[] value) {
 
         HashMap<Integer, String> colourMap = new HashMap<>();
-        colourMap.put(1, "#0000FF");    // Blue
-        colourMap.put(2, "#0080FF");    // Blue
-        colourMap.put(3, "#00FFFF");    // Light blue
-        colourMap.put(4, "#00FF80");    // Green
-        colourMap.put(5, "#00FF00");    // Green
-        colourMap.put(6, "#80FF00");    // Green
-        colourMap.put(7, "#FFFF00");    // Yellow
-        colourMap.put(8, "#FF8000");    // Orange
-        colourMap.put(9, "#FF0000");    // Red
-        colourMap.put(0, "#7F00FF"); 	// Purple
+        colourMap.put(0, "#FAEA5C"); 	// Light yellow
+        colourMap.put(1, "#F7D055");
+        colourMap.put(2, "#F5B64E");
+        colourMap.put(3, "#F29C48");
+        colourMap.put(4, "#F08241");
+        colourMap.put(5, "#ED683A");
+        colourMap.put(6, "#EB4E34");
+        colourMap.put(7, "#E8342D");
+        colourMap.put(8, "#E61A26");
+        colourMap.put(9, "#E40120");    // Red
 
         String[] colors = new String[value.length];
 
